@@ -8,7 +8,7 @@ function start() {
     response.end();
   }
 
-  http.createServer(onRequest).listen(8888);
+  http.createServer(onRequest).listen(process.env.VMC_APP_PORT || 8000, null);
   console.log("Server has started.");
 }
 
